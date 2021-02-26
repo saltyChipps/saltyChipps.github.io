@@ -4,7 +4,7 @@ I'm currently attempting to figure out how to display a text based game I made i
 
 
 
-[Testing....Testing...](home.py)
+[Testing....Testing...](home.html)
 
 
 
