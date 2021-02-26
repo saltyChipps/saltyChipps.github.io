@@ -1,8 +1,21 @@
-## Welcome to GitHub Pages
+## Welcome to saltyChipps website
 
-You can use the [editor on GitHub](https://github.com/saltyChipps/saltyChipps.github.io/edit/main/README.md) to maintain and preview the content for your website in Markdown files.
+I'm currently attempting to figure out how to display a text based game I made in python here. Why here? I'll (hopefully) be ably to hook up a database and get a signin/signup/saving progress system working (it's a long game). Also, this way I can display my code _so easily_
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+
+
+
+
+
+
+
+**What you see below is just for me to remember markdown**
+
+
+
+
+
+
 
 ### Markdown
 
