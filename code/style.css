@@ -1,0 +1,9 @@
+body {
+    background-color: rgb(40, 44, 52);
+    font-family: sans-serif;
+    color: darkgray;
+}
+
+button {
+    color: dodgerblue;
+}
