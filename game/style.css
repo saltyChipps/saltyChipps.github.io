@@ -3,3 +3,53 @@ body {
     background-color: rgb(40, 44, 52);
     color: white;
 }
+
+.terminal {
+    margin-left: 30px;
+    width: 600px;
+    height: 375px;
+    overflow: scroll;
+    background-color: black;
+}
+
+.reference {
+    margin-left: 680px;
+    margin-top: -375;
+    width: 375px;
+    height: 600px;
+    overflow: scroll;
+    background-color:beige;
+}
+
+#terminal-type {
+    background: rgb(15, 15, 15);
+    color: whitesmoke;
+    margin-top:345px;
+    width:500px;
+    height: 30px;
+    border: 0;
+}
+
+#terminal-type:focus {
+    border: none;
+    outline: none;
+}
+
+#enter {
+    position: absolute;
+    top: 411px;
+    width:100px;
+    height: 30px;
+}
+
+@media (max-width:1085px) {
+    .reference {
+        margin: auto;
+        margin-top: 30px;
+    }
+    .terminal {
+        margin: auto;
+    }
+  }
+
+  
