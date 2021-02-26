@@ -7,6 +7,8 @@ I'm currently attempting to figure out how to display a text based game I made i
 [Link to home.html](home.html) <-- sort of works  
 [Link to home.py](home.py) <-- _why does this try and download a file_
 
+[SOMETHING](code/index.html)
+
 TEST
 ```python
 print("text")
