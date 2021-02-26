@@ -7,7 +7,13 @@ I'm currently attempting to figure out how to display a text based game I made i
 [Link to home.html](home.html) <-- sort of works  
 [Link to home.py](home.py) <-- _why does this try and download a file_
 
-
+TEST
+```python
+print("text")
+arr = ['thing1', 'thing2', 'thing3']
+for item in arr:
+  print(item)
+```
 
 
 **What you see below is just for me to remember markdown**
