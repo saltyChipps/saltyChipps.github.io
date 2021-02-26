@@ -4,8 +4,7 @@ I'm currently attempting to figure out how to display a text based game I made i
 
 
 
-
-**[SOMETHING](code/index.html)**
+**[Here's a link to my game](code/index.html)**
 
 
 **What you see below is just for me to remember markdown**  
