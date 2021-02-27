@@ -4,12 +4,19 @@ body {
     color: white;
 }
 
+button {
+    background-color:white;
+    border: 1px solid gray;
+    border-radius: 3px;
+}
+
 .terminal {
     margin-left: 30px;
     width: 600px;
     height: 375px;
     overflow: scroll;
     background-color: black;
+    border-bottom-right-radius: 3px;
 }
 
 .reference {
@@ -52,4 +59,3 @@ body {
     }
   }
 
-  
