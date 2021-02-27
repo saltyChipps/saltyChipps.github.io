@@ -19,7 +19,6 @@ p {
     width: 600px;
     height: 375px;
     background-color: black;
-    border-bottom-right-radius: 3px;
 }
 
 .game-text-here {
@@ -29,13 +28,14 @@ p {
     height: 375px;
 }
 
-.reference {
+.help {
+    text-align: center;
     margin-left: 680px;
     margin-top: -375;
-    width: 375px;
-    height: 600px;
     overflow: scroll;
     background-color:beige;
+    width: 375px;
+    height: 600px;
 }
 
 #terminal-type {
@@ -44,6 +44,8 @@ p {
     width:500px;
     height: 30px;
     border: 0;
+    border-radius: 0px;
+    border-bottom-left-radius: 3px;
 }
 
 #terminal-type, #enter:focus {
@@ -59,7 +61,7 @@ p {
 }
 
 @media (max-width:1085px) {
-    .reference {
+    .help {
         margin: auto;
         margin-top: 50px;
     }

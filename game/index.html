@@ -5,6 +5,7 @@
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
         <link href="style.css" rel="stylesheet">
         <link href="individualS.css" rel="stylesheet">
+        <link href="sidebar.css" rel="stylesheet">
     </head>
     <body>
 
@@ -18,12 +19,11 @@
             <button id="enter" onclick="ENTER();">Go</button>
         </div>
 
-        <div class="reference" style="text-align:center;">
-            <h3><tanCB>Help</tan></h3>
-        </div>
-
+        <div class="fill-with-sidebar-help"></div>
 
         <script>
+
+            var smallStyles = false
 
             function ENTER() {
                 input = $("#terminal-type").val();
@@ -34,7 +34,53 @@
                 $(".game-text-here").append(appendThis);
             }
 
+            checkScreenSize();
+            $(window).resize(checkScreenSize);
+
+            function checkScreenSize() {
+                if ($(window).width() <= 610) { // && smallStyles == false
+                    var appendThis = `<div id="helpSidebar" class="sidebar">
+                                        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+                                        <h2><tanCB>Help</tanCB></h2>
+                                    </div>
+                                    <div id="main">
+                                        <button class="openbtn" onclick="openNav();">&#9776; Help</button>
+                                    </div>`;
+                    $(".fill-with-sidebar-help").html(appendThis);
+                    smallStyles = true;
+                }
+                if ($(window).width() > 610) { // && smallStyles == true
+                    var appendThis = `<div class="help">
+                                        <h2><tanCB>Help</tanCB></h2>
+                                    </div>`;
+                    $(".fill-with-sidebar-help").html(appendThis);
+                    smallStyles = false;
+                }
+            }
+            function openNav() {
+                $("#helpSidebar").css.textAlign = "center";
+                $("#helpSidebar").css.marginLeft = "680px";
+                $("#helpSidebar").css.marginTop = "-375px";
+                $("#helpSidebar").css.width = "375px";
+                $("#helpSidebar").css.height = "600px";
+                $("#helpSidebar").css.overflow = "scroll";
+                $("#helpSidebar").css.backgroundColor = "beige";
+            }
+            function closeNav() {
+                $("#helpSidebar").css.width = "0px";
+            }
+
         </script>
 
     </body>
 </html>
+
+<!--
+    text-align: center;
+    margin-left: 680px;
+    margin-top: -375px;
+    width: 375px;
+    height: 600px;
+    overflow: scroll;
+    background-color:beige;
+-->
