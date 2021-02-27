@@ -11,8 +11,11 @@
         <h1><slategrayI>2021 </slategrayI> Adventure Game</h1>
 
         <div class="terminal">
+            <div class="game-text-here">
+                <!-- this is where game text ends up being added -->
+            </div>
             <input id="terminal-type">
-            <button id="enter">Go</button>
+            <button id="enter" onclick="ENTER();">Go</button>
         </div>
 
         <div class="reference" style="text-align:center;">
@@ -21,7 +24,14 @@
 
         <script>
 
-            // <input id="input-box"></input>
+            function ENTER() {
+                input = $("#terminal-type").val();
+                if (input == "") {
+                    input = "error: string expected";
+                }
+                appendThis = "<p> --> " + input + "</p>";
+                $(".game-text-here").append(appendThis);
+            }
 
         </script>
 
