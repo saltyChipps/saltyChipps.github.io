@@ -61,10 +61,31 @@ p {
 @media (max-width:1085px) {
     .reference {
         margin: auto;
-        margin-top: 30px;
+        margin-top: 50px;
     }
     .terminal {
         margin: auto;
     }
+    #top {
+        text-align: center;
+    }
+  }
+
+  @media (max-width:610px) {
+      .terminal {
+          width: 400px;
+          height: 500px;
+      }
+      #terminal-type {
+          width: 325px;
+          position: absolute;
+          top: 572px;
+      }
+      #enter {
+          width: 75px;
+          position: absolute;
+          top: 602px;
+          right: 104px;
+      }
   }
 
