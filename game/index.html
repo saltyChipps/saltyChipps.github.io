@@ -1,6 +1,6 @@
 <html>
     <head>
-        <title>saltyChipps</title>
+        <title>Book Log</title>
         <script src="script.js"></script>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
         <link href="style.css" rel="stylesheet">
@@ -19,14 +19,43 @@
             <button id="enter" onclick="ENTER();">Go</button>
         </div>
 
-        <div class="help">
-            <h2><tanCB>Help</tanCB></h2>
-        </div>
+        <div class="fill-with-sidebar-help"></div>
 
         <script>
-            
+
+            function start() {
+                print("Hello and welcome!");
+                print("Would you like to create an account?")
+            }
+
+            function print(text) {
+                $(".game-text-here").append("- " + toString(text));
+            }
+
+            function input(text) {
+                playerInput = 
+            }
+
+            function ENTER() {
+                input = $("#terminal-type").val();
+                if (input == "") {
+                    input = "error: string expected";
+                }
+                appendThis = "<p> --> " + input + "</p>";
+                $(".game-text-here").append(appendThis);
+            }
 
         </script>
 
     </body>
 </html>
+
+<!--
+    text-align: center;
+    margin-left: 680px;
+    margin-top: -375px;
+    width: 375px;
+    height: 600px;
+    overflow: scroll;
+    background-color:beige;
+-->
