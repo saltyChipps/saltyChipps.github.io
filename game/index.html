@@ -1,6 +1,6 @@
 <html>
     <head>
-        <title>Book Log</title>
+        <title>Adventure Game</title>
         <script src="script.js"></script>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
         <link href="style.css" rel="stylesheet">
@@ -23,17 +23,25 @@
 
         <script>
 
+            var user_input = '';
+
             function start() {
                 print("Hello and welcome!");
-                print("Would you like to create an account?")
+                print("Would you like to create an account?");
+                getText();
+                if (user_input == "response lol") {
+                    print("ayoooo it worked");
+                }
             }
+            start();
 
             function print(text) {
-                $(".game-text-here").append("- " + toString(text));
+                $(".game-text-here").append("<p>- " + text + "</p></br>");
             }
 
-            function input(text) {
-                playerInput = 
+            function getText() {
+                user_input = $(".terminal-type").val();
+                $(".terminal-type").text = '';
             }
 
             function ENTER() {
