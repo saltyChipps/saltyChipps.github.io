@@ -31,11 +31,11 @@ p {
 .help {
     text-align: center;
     margin-left: 680px;
-    margin-top: -375;
-    overflow: scroll;
-    background-color:beige;
+    margin-top: -375px;
     width: 375px;
     height: 600px;
+    overflow: scroll;
+    background-color:beige;
 }
 
 #terminal-type {

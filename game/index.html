@@ -16,54 +16,108 @@
         <div class="terminal">
             <div class="game-text-here"></div> <!-- this is where game text ends up being added -->
             <input id="terminal-type">
-            <button id="enter" onclick="ENTER();">Go</button>
+            <button id="enter" onclick="getText();">Go</button>
         </div>
 
-        <div class="fill-with-sidebar-help"></div>
+        <div class="help">
+            <h2><tanCB>Help</tanCB></h2>
+        </div>
 
         <script>
 
             var user_input = '';
+            var place = '';
 
-            function start() {
+            function askCreateAcc() {
+                place = 'start';
                 print("Hello and welcome!");
                 print("Would you like to create an account?");
-                getText();
-                if (user_input == "response lol") {
-                    print("ayoooo it worked");
-                }
             }
-            start();
+            askCreateAcc();
+
+            function createAcc() {
+                console.log("start two");
+            }
 
             function print(text) {
-                $(".game-text-here").append("<p>- " + text + "</p></br>");
+                $(".game-text-here").append("<p>- " + text + "</p>");
             }
 
             function getText() {
-                user_input = $(".terminal-type").val();
-                $(".terminal-type").text = '';
-            }
-
-            function ENTER() {
                 input = $("#terminal-type").val();
-                if (input == "") {
-                    input = "error: string expected";
-                }
                 appendThis = "<p> --> " + input + "</p>";
                 $(".game-text-here").append(appendThis);
+                user_input = input;
+
+                if (place == 'start') {
+                    if (user_input == 'yes'){
+                        createAccount()
+                    }
+                }
             }
+
+            // SIGNUP, CREATE ACCOUNT, AND CLEAR DATA FUNCTIONS
+
+            function showApp(response) {
+                if (response.includes('error')) {
+                    alert(response);
+                } else {
+                    currentUser = response;
+                    $('.before-login').hide(); // change
+                    $('.after-login').show(); // change
+                    var thing = {
+                        mode: 'show',
+                        userId: currentUser // change
+                    }
+                    $.ajax({
+                        url: 'timer.py',
+                        data: thing,
+                        dataType: 'json',
+                        success: getExercises
+                    })
+                }
+                console.log(response);
+            }
+    
+            function login(event) {
+                event.preventDefault();
+                var loginObj = {
+                    mode: 'login',
+                    username: $('#login-username-input').val(), // change
+                    password: $('#login-password-input').val() // change
+                }
+                $.ajax({
+                    url: 'timer.py', // change
+                    data: loginObj,
+                    success: showApp
+                });
+            }
+
+            $('#login-form').submit(login); // change
+
+            function createAccount(eventObj) {
+                eventObj.preventDefault();
+                var password1 = $('#signup-password-input').val(); // change
+                var password2 = $('#signup-confirm-password-input').val(); // change
+                if (password1 == password2) {
+                    var userObj = {
+                        mode: 'signup',
+                        username: $('#signup-username-input').val(), // change
+                        password: password1 // change
+                    }
+                    $.ajax({
+                        url: 'timer.py', // change
+                        data: userObj,
+                        success: showApp
+                    });
+                } else {
+                    alert("Password doesn't match")
+                }
+            }
+
+            $('#signup-form').submit(createAccount); // change
 
         </script>
 
     </body>
 </html>
-
-<!--
-    text-align: center;
-    margin-left: 680px;
-    margin-top: -375px;
-    width: 375px;
-    height: 600px;
-    overflow: scroll;
-    background-color:beige;
--->
